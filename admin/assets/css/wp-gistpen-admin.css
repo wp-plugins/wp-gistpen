@@ -1,0 +1,83 @@
+/* This stylesheet is used to style the admin option form of the plugin. */
+i.mce-i-icons {
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font: normal 20px/1 'dashicons';
+  vertical-align: top; }
+
+i.mce-i-icons:before {
+  content: "\f464"; }
+
+#wp-gistpen-insert-dialog {
+  background: #EEE; }
+  #wp-gistpen-insert-dialog span.spinner {
+    background: url(../images/spinner.gif) no-repeat;
+    -webkit-background-size: 20px 20px;
+    background-size: 20px 20px;
+    display: inline;
+    float: right;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    width: 20px;
+    height: 20px;
+    margin: 2px 5px 0; }
+  #wp-gistpen-insert-dialog .loading {
+    text-align: center;
+    margin: 10px 160px;
+    width: 130px; }
+  #wp-gistpen-insert-dialog .posting {
+    text-align: left;
+    margin: 10px 0 0 300px;
+    width: 150px; }
+
+#wp-gistpen-insert-dialog-body {
+  overflow: auto; }
+  #wp-gistpen-insert-dialog-body #wp-gistpen-insert-wrap {
+    padding: 0 16px; }
+    #wp-gistpen-insert-dialog-body #wp-gistpen-insert-wrap .gistpen-search-wrap {
+      margin: 5px 0 9px;
+      display: block;
+      overflow: hidden; }
+      #wp-gistpen-insert-dialog-body #wp-gistpen-insert-wrap .gistpen-search-wrap span {
+        float: left; }
+      #wp-gistpen-insert-dialog-body #wp-gistpen-insert-wrap .gistpen-search-wrap .search-label {
+        display: inline-block;
+        text-align: right;
+        padding-right: 5px; }
+      #wp-gistpen-insert-dialog-body #wp-gistpen-insert-wrap .gistpen-search-wrap .gistpen-search-field {
+        float: left;
+        width: 250px;
+        max-width: 70%;
+        height: auto; }
+
+#insert-existing .query-notice, #insert-existing p {
+  margin: 5px 0; }
+#insert-existing .query-results ul li:after {
+  content: "";
+  display: table;
+  clear: both; }
+#insert-existing .query-results ul li div.gistpen-title {
+  float: left;
+  margin-left: 15px; }
+#insert-existing .query-results ul li div.gistpen-radio {
+  float: left; }
+
+.create_new_gistpen ul li {
+  border: none; }
+  .create_new_gistpen ul li.create_new_gistpen {
+    padding: 5px; }
+  .create_new_gistpen ul li label {
+    content: "";
+    display: table;
+    clear: both; }
+  .create_new_gistpen ul li input, .create_new_gistpen ul li textarea, .create_new_gistpen ul li select {
+    width: 95%;
+    margin: 5px 10px;
+    background-color: #FFF !important; }
+  .create_new_gistpen ul li label {
+    margin: 5px; }
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both; }

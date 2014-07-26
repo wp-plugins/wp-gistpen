@@ -12,11 +12,11 @@
  *
  * @wordpress-plugin
  * Plugin Name:       WP-Gistpen
- * Plugin URI:        http://www.jamesdigioia.com/
+ * Plugin URI:        http://www.jamesdigioia.com/wp-gistpen/
  * Description:       A self-hosted alternative to putting your code snippets on Gist.
- * Version:           0.1.2
+ * Version:           0.2.0
  * Author:            James DiGioia
- * Author URI:        http://www.jamesdigioia.com
+ * Author URI:        http://www.jamesdigioia.com/
  * Text Domain:       wp-gistpen
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
@@ -35,6 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  *----------------------------------------------------------------------------*/
 
 define('WP_GISTPEN_DIR', plugin_dir_path( __FILE__ ));
+define('WP_GISTPEN_URL', plugin_dir_url( __FILE__ ));
 
 /*----------------------------------------------------------------------------*
  * Public-Facing Functionality
@@ -64,7 +65,9 @@ add_action( 'plugins_loaded', array( 'WP_Gistpen', 'get_instance' ) );
 /**
  * The code below is intended to to give the lightest footprint possible.
  */
-if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
+if ( is_admin() ) {
 	require_once( WP_GISTPEN_DIR . 'admin/class-wp-gistpen-admin.php' );
 	add_action( 'plugins_loaded', array( 'WP_Gistpen_Admin', 'get_instance' ) );
+	require_once( WP_GISTPEN_DIR . 'admin/class-wp-gistpen-editor.php' );
+	add_action( 'plugins_loaded', array( 'WP_Gistpen_Editor', 'get_instance' ) );
 }

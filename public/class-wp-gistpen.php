@@ -24,7 +24,7 @@ class WP_Gistpen {
 	 * @var     string
 	 * @since   0.1.0
 	 */
-	const VERSION = '0.1.0';
+	const VERSION = '0.2.0';
 
 	/**
 	 *
@@ -54,7 +54,7 @@ class WP_Gistpen {
 	 * @var      array
 	 * @since    0.1.0
 	 */
-	protected static $langs = array(
+	public static $langs = array(
 		'AppleScript' => 'applescript',
 		'ActionScript3' => 'as3',
 		'Bash' => 'bash',
@@ -108,9 +108,6 @@ class WP_Gistpen {
 
 		// Add the description to the Gistpen content
 		add_filter( 'the_content', array($this, 'gistpen_content_add_description' ) );
-
-		// Disable visual editor
-		add_filter( 'user_can_richedit', array( $this, 'disable_visual_editor' ) );
 
 		// All the init hooks
 		add_action( 'init', array( $this, 'init' ) );
@@ -352,7 +349,7 @@ class WP_Gistpen {
 	 * @since    0.1.0
 	 */
 	public function enqueue_styles() {
-		wp_enqueue_style( $this->plugin_slug . '-plugin-styles', plugins_url( 'assets/css/public.css', __FILE__ ), array(), self::VERSION );
+		// wp_enqueue_style( $this->plugin_slug . '-plugin-styles', plugins_url( 'assets/css/wp-gistpen-public.css', __FILE__ ), array(), self::VERSION );
 		wp_enqueue_style( 'syntaxhighlighter-style-core', plugins_url( 'assets/vendor/SyntaxHighlighter/styles/shCore.css', __FILE__ ), array(), self::VERSION );
 		wp_enqueue_style( 'syntaxhighlighter-style-default', plugins_url( 'assets/vendor/SyntaxHighlighter/styles/shCoreDefault.css', __FILE__ ), array(), self::VERSION );
 	}
@@ -372,7 +369,7 @@ class WP_Gistpen {
 	 * @since    0.1.0
 	 */
 	public function localize_scripts() {
-		wp_localize_script( $this->plugin_slug . '-plugin-script', 'PLUGIN_DIR', array( plugin_dir_url( __FILE__ ) ) );
+		wp_localize_script( $this->plugin_slug . '-plugin-script', 'PLUGIN_DIR', array( WP_GISTPEN_DIR ) );
 	}
 
 	/**
@@ -424,6 +421,7 @@ class WP_Gistpen {
 			'exclude_from_search' => false,
 			'publicly_queryable'  => true,
 			'capability_type'     => 'post',
+			'menu_icon'           => 'dashicons-edit'
 		);
 		register_post_type( 'gistpens', $args );
 	}
@@ -504,21 +502,6 @@ class WP_Gistpen {
 		}
 
 		return $content;
-	}
-
-	/**
-	 * Disable the visual editor because
-	 * it messes with the code layout
-	 *
-	 * @return   false|$default     disables only on gistpens
-	 * @since    0.1.0
-	 */
-	public function disable_visual_editor( $default ) {
-		global $post;
-
-		if ( 'gistpens' == get_post_type( $post ) )
-			return false;
-		return $default;
 	}
 
 	/**
