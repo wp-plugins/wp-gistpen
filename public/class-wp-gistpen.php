@@ -24,7 +24,7 @@ class WP_Gistpen {
 	 * @var     string
 	 * @since   0.1.0
 	 */
-	const VERSION = '0.2.0';
+	const VERSION = '0.2.2';
 
 	/**
 	 *
@@ -369,7 +369,7 @@ class WP_Gistpen {
 	 * @since    0.1.0
 	 */
 	public function localize_scripts() {
-		wp_localize_script( $this->plugin_slug . '-plugin-script', 'PLUGIN_DIR', array( WP_GISTPEN_DIR ) );
+		wp_localize_script( $this->plugin_slug . '-plugin-script', 'PLUGIN_DIR', array( WP_GISTPEN_URL ) );
 	}
 
 	/**

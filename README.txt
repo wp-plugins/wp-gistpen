@@ -1,12 +1,12 @@
 === WP-Gistpen ===
-Contributors: JamesDiGioia
-Donate link: http://jamesdigioia.com/
-Tags: gist, code snippets, codepen
-Requires at least: 3.9
-Tested up to: 3.9.1
-Stable tag: 0.2.1
-License: GPLv2
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Contributors: JamesDiGioia  
+Donate link: http://jamesdigioia.com/  
+Tags: gist, code snippets, codepen  
+Requires at least: 3.9  
+Tested up to: 3.9.1  
+Stable tag: 0.2.2  
+License: GPLv2  
+License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
 A self-hosted alternative to putting your code snippets on Gist.
 
@@ -64,6 +64,9 @@ Additionally, I want to make Gistpens embeddable on other websites the same way 
 2. How your code will appear in your post.
 
 == Changelog ==
+
+= 0.2.1 =
+* I think I got it this time...
 
 = 0.2.1 =
 * Fix mis-enqueued scripts
