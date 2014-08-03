@@ -81,3 +81,6 @@ i.mce-i-icons:before {
   content: "";
   display: table;
   clear: both; }
+
+pre.gistpen {
+  width: 50%; }
