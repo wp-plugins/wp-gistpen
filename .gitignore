@@ -39,16 +39,10 @@ intermediate
 cache
 node_modules
 build
+assets
 
 # Generated files
 wp-gistpen.zip
-
-# Unneeded SH files
-/public/assets/vendor/SyntaxHighlighter/tests/
-/public/assets/vendor/SyntaxHighlighter/demos/
-/public/assets/vendor/SyntaxHighlighter/compass/
-/public/assets/vendor/SyntaxHighlighter/.hgignore
-/public/assets/vendor/SyntaxHighlighter/.bower.json
 
 # Other stuff
 .editorconfig
