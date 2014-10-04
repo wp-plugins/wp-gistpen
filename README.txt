@@ -98,7 +98,6 @@ Essentially, the idea is to build a fully-featured Gist clone in WordPress
 
 == Changelog ==
 
-= 0.3.1 =
 = 0.4.0 =
 * MAJOR FEATURE: Multiple files can be created in a single Gistpen
 	* First step towards Gist compatibility
@@ -106,6 +105,7 @@ Essentially, the idea is to build a fully-featured Gist clone in WordPress
 * Integrate ACE editor into Gistpen
 * Bug fixes: properly escaping content display
 
+= 0.3.1 =
 * Forgot to minify JavaScripts
 
 = 0.3.0 =
