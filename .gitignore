@@ -38,11 +38,19 @@ intermediate
 .idea
 cache
 node_modules
+bower_components
+vendor
 build
-assets
+screenshot*
+icon*
+test
+bin
 
 # Generated files
 wp-gistpen.zip
 
 # Other stuff
 .editorconfig
+phpunit.xml
+scss
+.travis.yml

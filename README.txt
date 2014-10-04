@@ -1,14 +1,16 @@
 === WP-Gistpen ===
-Contributors: JamesDiGioia
-Donate link: http://jamesdigioia.com/
-Tags: gist, code snippets, codepen
-Requires at least: 3.9
-Tested up to: 3.9.1
-Stable tag: 0.3.1
-License: GPLv2
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Contributors: JamesDiGioia  
+Donate link: http://jamesdigioia.com/  
+Tags: gist, code snippets, codepen  
+Requires at least: 3.9  
+Tested up to: 4.0  
+Stable tag: 0.4.0  
+License: GPLv2  
+License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
 A self-hosted alternative to putting your code snippets on Gist.
+
+[![Build Status](https://travis-ci.org/mAAdhaTTah/WP-Gistpen.svg?branch=develop)](https://travis-ci.org/mAAdhaTTah/WP-Gistpen)
 
 == Description ==
 
@@ -51,7 +53,7 @@ After inserting the shortcode, your code will appear in your post, highlighted b
 
 = How do I highlight specific lines in my Gistpen? =
 
-To highlight a specific line, add `highlight="=="`, where == is a line number or range of numbers you want highlighted, like this ([via PrismJS documentation](http://prismjs.com/plugins/line-highlight/)):
+To highlight a specific line, add `highlight="^^"`, where ^^ is a line number or range of numbers you want highlighted, like this ([via PrismJS documentation](http://prismjs.com/plugins/line-highlight/)):
 
 * A single number refers to the line with that number
 * Ranges are denoted by two numbers, separated with a hyphen (-)
@@ -77,6 +79,8 @@ Eventually, I hope to make this plugin interoperable with Gist, allowing you to 
 
 Additionally, I want to make Gistpens embeddable on other websites the same way you can embed Gists, but both of those larger features are likely a long way off.
 
+Essentially, the idea is to build a fully-featured Gist clone in WordPress
+
 == Screenshots ==
 
 
@@ -91,9 +95,18 @@ Additionally, I want to make Gistpens embeddable on other websites the same way 
 
 4. The current options page.
 
+
+5. Gistpen editor screen with Ace editor
+
 == Changelog ==
 
 = 0.3.1 =
+= 0.4.0 =
+* MAJOR FEATURE: Multiple files can be created in a single Gistpen
+	* First step towards Gist compatibility
+	* The database gets upgraded to account for this, so PLEASE make a backup before you upgrade
+* Integrate ACE editor into Gistpen
+* Bug fixes: properly escaping content display
 
 * Forgot to minify JavaScripts
 
