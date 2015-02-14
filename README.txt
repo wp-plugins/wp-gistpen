@@ -3,20 +3,74 @@ Contributors: JamesDiGioia
 Donate link: http://jamesdigioia.com/  
 Tags: gist, code snippets, codepen  
 Requires at least: 3.9  
-Tested up to: 4.0  
-Stable tag: 0.4.0  
+Tested up to: 4.1  
+Stable tag: 0.5.0  
 License: GPLv2  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
+== Description ==
+
 A self-hosted alternative to putting your code snippets on Gist.
 
-== Description ==
+[![Build Status](https://scrutinizer-ci.com/g/mAAdhaTTah/WP-Gistpen/badges/build.png?b=develop)](https://scrutinizer-ci.com/g/mAAdhaTTah/WP-Gistpen/build-status/develop) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mAAdhaTTah/WP-Gistpen/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/mAAdhaTTah/WP-Gistpen/?branch=develop) [![Code Coverage](https://scrutinizer-ci.com/g/mAAdhaTTah/WP-Gistpen/badges/coverage.png?b=develop)](https://scrutinizer-ci.com/g/mAAdhaTTah/WP-Gistpen/?branch=develop)
 
 You use WordPress because you want control over your writing. Why give Gist or Codepen your code snippets? WP-Gistpen is a self-hosted replacement for your WordPress blog.
 
+Features include:
+
+* Revision saving
+* Gist import & export
+* ACE editor
+* PrismJS syntax highlighting
+* Supported Languages
+	- Assembly (NASM)
+	- ActionScript
+	- AppleScript
+	- Bash
+	- C
+	- Coffeescript
+	- C#
+	- CSS
+	- Dart
+	- Eiffel
+	- Erlang
+	- Gherkin/Cucumber
+	- Git/Diff
+	- Go
+	- Groovy
+	- HAML
+	- Handlebars
+	- HTML
+	- HTTP
+	- ini
+	- Jade
+	- Java
+	- JavaScript
+	- LaTeX
+	- LESS
+	- Markdown
+	- Matlab
+	- Objective-C
+	- Perl
+	- PHP
+	- PlainText
+	- PowerShell
+	- Python
+	- R
+	- Rust
+	- Ruby
+	- Sass
+	- Scala
+	- Scheme
+	- Smarty
+	- Sql
+	- Swift
+	- Twig
+	- XML
+
 == Installation ==
 
-= Using The WordPress Dashboard =
+= Using the WordPress Dashboard =
 
 1. Navigate to the 'Add New' in the plugins dashboard
 2. Search for 'wp-gistpen'
@@ -41,11 +95,17 @@ You use WordPress because you want control over your writing. Why give Gist or C
 
 == Frequently Asked Questions ==
 
+= What are the plugin's requirements? =
+
+First, revisions need to be enabled. They can be disabled in `wp-config.php`, but WP-Gistpen relies on them to keep everything in sync. A future version will remove this dependency, but it's currently required.
+
+Additionally, your PHP version should be 5.3+. If you're a developer using 5.2, may God have mercy on your soul.
+
 = How do I create a Gistpen and insert it into the post? =
 
-WP-Gistpen registers a new `gistpens` post type. Instead of posting your public code snippets on Gist, go to Gistpens -> Add New, and paste in your code.
+To add a new Gistpen, go to Gistpens -> Add New, and paste in your code. You can enable or disable Gist syncing on a a per-Gistpen basis.
 
-You can also create and insert a Gistpen directly into your post/page from the visual editor by clicking the pen button. From the pop-up, select one of the recent Gistpens or create a new one by pasting in your code and clicking "Insert".
+You can also create and insert a Gistpen directly into your post/page from the visual editor by clicking the code button. From the pop-up, select one of the recent Gistpens, search your Gistpens, or create a new one by pasting in your code and clicking "Insert".
 
 After inserting the shortcode, your code will appear in your post, highlighted by [PrismJS](http://prismjs.com).
 
@@ -71,6 +131,24 @@ Offset does not yet work but will be added soon.
 
 You can link to a specific line in your Gistpen by linking to `#gistpen-{gistpen-slug}.{lines}`. The lines don't need to be highlighted in advance for the link to work, and they will be highlighted when the link is clicked. The `{lines}` should match the same format as above.
 
+= How do I get my Gist token from GitHub? =
+
+1. Login to GitHub.
+2. Go to Settings -> Applications.
+3. Under "Personal access tokens", click "Generate New Token."
+4. Give it a name, click create
+	* The default settings work, but make you sure you at least include the `gist` and `user` scopes.
+5. Copy the generated token.
+6. Paste it into the settings page.
+7. ???
+8. Profit!
+
+= How do I sync my Gistpens to Gist? =
+
+Gistpens can be exported en masse from the Gistpens settings page. All Gistpens will be synced, only if the Gistpen hasn't been synced yet, but **regardless of whether syncing for the Gistpen is enabled**. Syncing will then be enabled on the exported Gistpens.
+
+If you do not want this, you can enable/disable Gistpen syncing on a per-Gistpen basis. Just click the checkbox on the Gistpen edit page, and any changes will be reflected on the corresponding Gist on update. If you uncheck that box, future changes will not be reflected on Gist.
+
 = What is the future of this plugin? =
 
 Eventually, I hope to make this plugin interoperable with Gist, allowing you to import your current Gists, fork other people's Gists into your Gistpen, and publishing your Gistpens to Gist.
@@ -94,79 +172,172 @@ Essentially, the idea is to build a fully-featured Gist clone in WordPress
 4. The current options page.
 
 
-5. Gistpen editor screen with Ace editor
+5. The options page with a token saved.
+
+
+6. Gistpen editor screen with Ace editor
 
 == Changelog ==
 
-= 0.3.1 =
-= 0.4.0 =
-* MAJOR FEATURE: Multiple files can be created in a single Gistpen
-	* First step towards Gist compatibility
-	* The database gets upgraded to account for this, so PLEASE make a backup before you upgrade
-* Integrate ACE editor into Gistpen
-* Bug fixes: properly escaping content display
+This change log follows the [Keep a Changelog standards][keepachangelog]. Versions follows [Semantic Versioning][semver].
 
+= [0.5.0] - 2015-02-14 =
+
+==== Added ====
+* MAJOR FEATURE: Gist interoperability
+	- Gistpens can be exported to Gist on a case-by-case basis
+	- Most Gists can be imported into Gistpen
+		+ Unsupported languages get changed to "Plaintext" - sorry!
+* New Feature: Revisions and history
+* Bad tests for everything :/
+* New languages:
+	- Actionscript
+	- Applescript
+	- Dart
+	- Eiffel
+	- Erlang
+	- Gherkin
+	- Git
+	- Haml
+	- Handlebars
+	- Jade
+	- LaTeX
+	- LESS
+	- Markdown
+	- Matlab
+	- NASM
+	- Perl
+	- Powershell
+	- R
+	- Rust
+	- Scheme
+	- Smarty
+
+==== Changed ====
+* CMB -> CMB2
+* Massive reorganization wit namespacing + autoloading
+* Unminified scripts enqueued when `WP_SCRIPT_DEBUG` is true
+* ACE editor rewritten in Backbone.js
+	- Saving and updating all done with AJAX
+* Menu icon pen -> code
+* Improved .org deployment process (No more dumbass "forgot to minify js" commits/releases)
+
+==== Fixed ====
+* Deleting bug
+	- Files were being left behind when Zips were deleted
+* Strings are now translatable
+* All languages cleaned up and verified working
+	- HTML & XML are split again
+
+= [0.4.0] - 2014-10-03 =
+
+==== Added ====
+* MAJOR FEATURE: Multiple files can be created in a single Gistpen
+	- First step towards Gist compatibility
+	- The database gets upgraded to account for this, so PLEASE make a backup before you upgrade
+* ACE editor
+
+==== Fixed ====
+* Properly escaping content display
+
+= [0.3.1] - 2014-08-03 =
+
+==== Fixed ====
 * Forgot to minify JavaScripts
 
-= 0.3.0 =
-* Enhancements
-	* Switch to [PrismJS](http://prismjs.com/) syntax highlighter
-	* Add options page
-	* Enable theme switching 
-	* Enable/disable line numbers
-	* Line-highlighting
-	* Link to lines
-* New Languages:
-	* C
-	* Coffeescript
-	* C#
-	* Go
-	* HTTP
-	* ini
-	* HTML/Markup (XML has been migrated here)
-	* Objective-C
-	* Swift
-	* Twig
-* Removed languages
-	* *If you need any of these languages readded, please open an issue on [GitHub](https://github.com/mAAdhaTTah/WP-Gistpen) to discuss.
-	* AppleScript
-	* ActionScript3
-	* ColdFusion
-	* CPP
-	* Delphi
-	* Diff
-	* Erlang
-	* JavaFX
-	* Perl
-	* Vb
+= [0.3.0] - 2014-08-03 =
 
-= 0.2.3 =
-* Fix bug that would delete languages without reinstalling
+==== Changed ====
+* Use [PrismJS](http://prismjs.com/) over SyntaxHighlighter
 
-= 0.2.2 =
+==== Added ====
+* Options page
+* Theme switching 
+* Line numbers plugin
+* Line-highlighting
+* Link to lines
+* Languages:
+	- C
+	- Coffeescript
+	- C#
+	- Go
+	- HTTP
+	- ini
+	- HTML/Markup (XML has been migrated here)
+	- Objective-C
+	- Swift
+	- Twig
 
-* I think I got it this time...
+==== Removed ====
+* Languages (*If you need any of these languages readded, please open an issue on [GitHub](https://github.com/mAAdhaTTah/WP-Gistpen) to discuss.)
+	- AppleScript
+	- ActionScript3
+	- ColdFusion
+	- CPP
+	- Delphi
+	- Diff
+	- Erlang
+	- JavaFX
+	- Perl
+	- Vb
 
-= 0.2.1 =
+= [0.2.3] - 2014-07-28 =
+
+==== Fixed ====
+* Uninstall/reinstall language deleting bug
+
+= [0.2.2] - 2014-07-28 =
+
+==== Fixed ====
+* Fix mis-enqueued scripts (again!)
+
+= [0.2.1] - 2014-07-27 =
+
+==== Fixed ====
 * Fix mis-enqueued scripts
 
-= 0.2.0 =
-* Add "Insert Gistpen" button into visual editor
-	* You can now add the shortcode from the visual editor by clicking the pen
-* Update Gistpen icon
-* Code organization improvements
-* README improvements
-* Build script improvements
+= [0.2.0] - 2014-07-26 =
 
-= 0.1.2 =
+==== Added ====
+* "Insert Gistpen" button in TinyMCE
+
+==== Updated ====
+* Gistpen icon
+* Code organization
+* README
+* Build script
+
+= [0.1.2] - 2014-07-17 =
+
+==== Fixed ====
 * More bugfixes
 
-= 0.1.1 =
-* Fix autoloader
-* Switch to defined constant for dir_path
+= [0.1.1] - 2014-07-17 =
 
-= 0.1 =
-* First Release
-	* Add Gistpen post type
-	* Make them embeddable in posts via shortcode
-	* User SyntaxHighlighter to display them
+==== Fixed ====
+* Autoloader
+
+==== Changed ====
+* Use defined constant for dir_path
+
+= [0.1.0] - 2014-07-17 =
+
+==== Added ====
+* Gistpen post type
+* Embeddable in posts via shortcode
+* Use SyntaxHighlighter to display
+
+[keepachangelog]: http://keepachangelog.com/
+[semver]: http://semver.org/
+[unreleased]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/develop
+[0.5.0]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.5.0
+[0.4.0]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.4.0
+[0.3.1]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.3.1
+[0.3.0]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.3.0
+[0.2.3]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.2.3
+[0.2.2]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.2.2
+[0.2.1]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.2.1
+[0.2.0]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.2.0
+[0.1.2]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.1.2
+[0.1.1]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.1.1
+[0.1.0]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.1.0
