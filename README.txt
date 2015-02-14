@@ -4,7 +4,7 @@ Donate link: http://jamesdigioia.com/
 Tags: gist, code snippets, codepen  
 Requires at least: 3.9  
 Tested up to: 4.1  
-Stable tag: 0.5.0  
+Stable tag: 0.5.1  
 License: GPLv2  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -179,11 +179,18 @@ Essentially, the idea is to build a fully-featured Gist clone in WordPress
 
 == Changelog ==
 
-This change log follows the [Keep a Changelog standards][keepachangelog]. Versions follows [Semantic Versioning][semver].
+This change log follows the [Keep a Changelog standards](http://keepachangelog.com/). Versions follows [Semantic Versioning](http://semver.org/).
+
+= [0.5.1] - 2015-02-14 =
+
+**Fixed**
+
+* Add new database migration to fix Gist exports of pre-0.5.0 Gistpens
 
 = [0.5.0] - 2015-02-14 =
 
-==== Added ====
+**Added**
+
 * MAJOR FEATURE: Gist interoperability
 	- Gistpens can be exported to Gist on a case-by-case basis
 	- Most Gists can be imported into Gistpen
@@ -213,7 +220,8 @@ This change log follows the [Keep a Changelog standards][keepachangelog]. Versio
 	- Scheme
 	- Smarty
 
-==== Changed ====
+**Changed**
+
 * CMB -> CMB2
 * Massive reorganization wit namespacing + autoloading
 * Unminified scripts enqueued when `WP_SCRIPT_DEBUG` is true
@@ -222,7 +230,8 @@ This change log follows the [Keep a Changelog standards][keepachangelog]. Versio
 * Menu icon pen -> code
 * Improved .org deployment process (No more dumbass "forgot to minify js" commits/releases)
 
-==== Fixed ====
+**Fixed**
+
 * Deleting bug
 	- Files were being left behind when Zips were deleted
 * Strings are now translatable
@@ -231,26 +240,31 @@ This change log follows the [Keep a Changelog standards][keepachangelog]. Versio
 
 = [0.4.0] - 2014-10-03 =
 
-==== Added ====
+**Added**
+
 * MAJOR FEATURE: Multiple files can be created in a single Gistpen
 	- First step towards Gist compatibility
 	- The database gets upgraded to account for this, so PLEASE make a backup before you upgrade
 * ACE editor
 
-==== Fixed ====
+**Fixed**
+
 * Properly escaping content display
 
 = [0.3.1] - 2014-08-03 =
 
-==== Fixed ====
+**Fixed**
+
 * Forgot to minify JavaScripts
 
 = [0.3.0] - 2014-08-03 =
 
-==== Changed ====
+**Changed**
+
 * Use [PrismJS](http://prismjs.com/) over SyntaxHighlighter
 
-==== Added ====
+**Added**
+
 * Options page
 * Theme switching 
 * Line numbers plugin
@@ -268,7 +282,8 @@ This change log follows the [Keep a Changelog standards][keepachangelog]. Versio
 	- Swift
 	- Twig
 
-==== Removed ====
+**Removed**
+
 * Languages (*If you need any of these languages readded, please open an issue on [GitHub](https://github.com/mAAdhaTTah/WP-Gistpen) to discuss.)
 	- AppleScript
 	- ActionScript3
@@ -283,25 +298,30 @@ This change log follows the [Keep a Changelog standards][keepachangelog]. Versio
 
 = [0.2.3] - 2014-07-28 =
 
-==== Fixed ====
+**Fixed**
+
 * Uninstall/reinstall language deleting bug
 
 = [0.2.2] - 2014-07-28 =
 
-==== Fixed ====
+**Fixed**
+
 * Fix mis-enqueued scripts (again!)
 
 = [0.2.1] - 2014-07-27 =
 
-==== Fixed ====
+**Fixed**
+
 * Fix mis-enqueued scripts
 
 = [0.2.0] - 2014-07-26 =
 
-==== Added ====
+**Added**
+
 * "Insert Gistpen" button in TinyMCE
 
-==== Updated ====
+**Updated**
+
 * Gistpen icon
 * Code organization
 * README
@@ -309,26 +329,28 @@ This change log follows the [Keep a Changelog standards][keepachangelog]. Versio
 
 = [0.1.2] - 2014-07-17 =
 
-==== Fixed ====
+**Fixed**
+
 * More bugfixes
 
 = [0.1.1] - 2014-07-17 =
 
-==== Fixed ====
+**Fixed**
+
 * Autoloader
 
-==== Changed ====
+**Changed**
+
 * Use defined constant for dir_path
 
 = [0.1.0] - 2014-07-17 =
 
-==== Added ====
+**Added**
+
 * Gistpen post type
 * Embeddable in posts via shortcode
 * Use SyntaxHighlighter to display
 
-[keepachangelog]: http://keepachangelog.com/
-[semver]: http://semver.org/
 [unreleased]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/develop
 [0.5.0]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.5.0
 [0.4.0]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.4.0
