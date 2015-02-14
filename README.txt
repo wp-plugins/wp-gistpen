@@ -179,9 +179,9 @@ Essentially, the idea is to build a fully-featured Gist clone in WordPress
 
 == Changelog ==
 
-This change log follows the [Keep a Changelog standards][keepachangelog]. Versions follows [Semantic Versioning][semver].
+This change log follows the [Keep a Changelog standards](http://keepachangelog.com/). Versions follows [Semantic Versioning](http://semver.org/).
 
-= [0.5.0] - 2015-02-14 =
+= [0.5.0](https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.5.0) - 2015-02-14 =
 
 ==== Added ====
 * MAJOR FEATURE: Gist interoperability
@@ -229,7 +229,7 @@ This change log follows the [Keep a Changelog standards][keepachangelog]. Versio
 * All languages cleaned up and verified working
 	- HTML & XML are split again
 
-= [0.4.0] - 2014-10-03 =
+= [0.4.0](https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.4.0) - 2014-10-03 =
 
 ==== Added ====
 * MAJOR FEATURE: Multiple files can be created in a single Gistpen
@@ -240,19 +240,19 @@ This change log follows the [Keep a Changelog standards][keepachangelog]. Versio
 ==== Fixed ====
 * Properly escaping content display
 
-= [0.3.1] - 2014-08-03 =
+= [0.3.1](https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.3.1) - 2014-08-03 =
 
 ==== Fixed ====
 * Forgot to minify JavaScripts
 
-= [0.3.0] - 2014-08-03 =
+= [0.3.0](https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.3.0) - 2014-08-03 =
 
 ==== Changed ====
 * Use [PrismJS](http://prismjs.com/) over SyntaxHighlighter
 
 ==== Added ====
 * Options page
-* Theme switching 
+* Theme switching
 * Line numbers plugin
 * Line-highlighting
 * Link to lines
@@ -281,22 +281,22 @@ This change log follows the [Keep a Changelog standards][keepachangelog]. Versio
 	- Perl
 	- Vb
 
-= [0.2.3] - 2014-07-28 =
+= [0.2.3](https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.2.3) - 2014-07-28 =
 
 ==== Fixed ====
 * Uninstall/reinstall language deleting bug
 
-= [0.2.2] - 2014-07-28 =
+= [0.2.2](https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.2.2) - 2014-07-28 =
 
 ==== Fixed ====
 * Fix mis-enqueued scripts (again!)
 
-= [0.2.1] - 2014-07-27 =
+= [0.2.1](https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.2.1) - 2014-07-27 =
 
 ==== Fixed ====
 * Fix mis-enqueued scripts
 
-= [0.2.0] - 2014-07-26 =
+= [0.2.0](https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.2.0) - 2014-07-26 =
 
 ==== Added ====
 * "Insert Gistpen" button in TinyMCE
@@ -307,12 +307,12 @@ This change log follows the [Keep a Changelog standards][keepachangelog]. Versio
 * README
 * Build script
 
-= [0.1.2] - 2014-07-17 =
+= [0.1.2](https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.1.2) - 2014-07-17 =
 
 ==== Fixed ====
 * More bugfixes
 
-= [0.1.1] - 2014-07-17 =
+= [0.1.1](https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.1.1) - 2014-07-17 =
 
 ==== Fixed ====
 * Autoloader
@@ -320,24 +320,9 @@ This change log follows the [Keep a Changelog standards][keepachangelog]. Versio
 ==== Changed ====
 * Use defined constant for dir_path
 
-= [0.1.0] - 2014-07-17 =
+= [0.1.0](https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.1.0) - 2014-07-17 =
 
 ==== Added ====
 * Gistpen post type
 * Embeddable in posts via shortcode
 * Use SyntaxHighlighter to display
-
-[keepachangelog]: http://keepachangelog.com/
-[semver]: http://semver.org/
-[unreleased]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/develop
-[0.5.0]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.5.0
-[0.4.0]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.4.0
-[0.3.1]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.3.1
-[0.3.0]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.3.0
-[0.2.3]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.2.3
-[0.2.2]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.2.2
-[0.2.1]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.2.1
-[0.2.0]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.2.0
-[0.1.2]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.1.2
-[0.1.1]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.1.1
-[0.1.0]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.1.0
