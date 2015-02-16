@@ -4,7 +4,7 @@ Donate link: http://jamesdigioia.com/
 Tags: gist, code snippets, codepen  
 Requires at least: 3.9  
 Tested up to: 4.1  
-Stable tag: 0.5.4  
+Stable tag: 0.5.5  
 License: GPLv2  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -180,6 +180,13 @@ Essentially, the idea is to build a fully-featured Gist clone in WordPress
 == Changelog ==
 
 This change log follows the [Keep a Changelog standards](http://keepachangelog.com/). Versions follows [Semantic Versioning](http://semver.org/).
+
+= [0.5.5] - 2015-02-15 =
+
+**Fixed**
+
+* Fixed syncing bug, renabled everything
+	- So sorry about the multiple releases. Ran into the problem after deploying, and didn't want anyone's DB to get out-of-sync. Everything looks good now, but let me know if you experience issues.
 
 = [0.5.4] - 2015-02-14 =
 
@@ -358,6 +365,7 @@ This change log follows the [Keep a Changelog standards](http://keepachangelog.c
 * Use SyntaxHighlighter to display
 
 [unreleased]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/develop
+[0.5.5]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.5.5
 [0.5.4]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.5.4
 [0.5.2]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.5.2
 [0.5.0]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.5.0
