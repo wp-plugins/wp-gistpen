@@ -4,7 +4,7 @@ Donate link: http://jamesdigioia.com/
 Tags: gist, code snippets, codepen  
 Requires at least: 3.9  
 Tested up to: 4.1  
-Stable tag: 0.5.5  
+Stable tag: 0.5.6  
 License: GPLv2  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -180,6 +180,12 @@ Essentially, the idea is to build a fully-featured Gist clone in WordPress
 == Changelog ==
 
 This change log follows the [Keep a Changelog standards](http://keepachangelog.com/). Versions follows [Semantic Versioning](http://semver.org/).
+
+### [0.5.6] - 2015-02-17
+
+**Fixed**
+
+* Logic bugs raised by Travis
 
 = [0.5.5] - 2015-02-15 =
 
