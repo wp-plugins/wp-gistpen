@@ -372,6 +372,7 @@ return array(
     'Symfony\\Component\\EventDispatcher\\EventSubscriberInterface' => $vendorDir . '/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventSubscriberInterface.php',
     'Symfony\\Component\\EventDispatcher\\GenericEvent' => $vendorDir . '/symfony/event-dispatcher/Symfony/Component/EventDispatcher/GenericEvent.php',
     'Symfony\\Component\\EventDispatcher\\ImmutableEventDispatcher' => $vendorDir . '/symfony/event-dispatcher/Symfony/Component/EventDispatcher/ImmutableEventDispatcher.php',
+    'WPUpdatePhp' => $vendorDir . '/wpupdatephp/wp-update-php/src/WPUpdatePhp.php',
     'WP_Gistpen\\Account\\Gist' => $baseDir . '/app/Account/Gist.php',
     'WP_Gistpen\\Activator' => $baseDir . '/app/Activator.php',
     'WP_Gistpen\\Adapter\\Api' => $baseDir . '/app/Adapter/Api.php',

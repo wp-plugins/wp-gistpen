@@ -11,4 +11,5 @@ return array(
     'Guzzle' => array($vendorDir . '/guzzle/guzzle/src'),
     'Github\\' => array($vendorDir . '/knplabs/github-api/lib'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src'),
+    '' => array($vendorDir . '/wpupdatephp/wp-update-php/src'),
 );
