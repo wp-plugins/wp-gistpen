@@ -3,8 +3,8 @@ Contributors: JamesDiGioia
 Donate link: http://jamesdigioia.com/  
 Tags: gist, code snippets, codepen  
 Requires at least: 3.9  
-Tested up to: 4.1  
-Stable tag: 0.5.7  
+Tested up to: 4.2.3  
+Stable tag: 0.5.8  
 License: GPLv2  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -180,6 +180,13 @@ Essentially, the idea is to build a fully-featured Gist clone in WordPress
 == Changelog ==
 
 This change log follows the [Keep a Changelog standards](http://keepachangelog.com/). Versions follows [Semantic Versioning](http://semver.org/).
+
+### [0.5.8] - 2015-07-26
+
+**Fixed**
+
+* Fixed a bug introduced in WordPress 4.2.3 where cap checks fail for `edit_post` on a post_id of 0.
+* Also loosened a couple checks because null values were being cast to 0. 
 
 = [0.5.7] - 2015-05-23 =
 
@@ -377,6 +384,7 @@ This change log follows the [Keep a Changelog standards](http://keepachangelog.c
 * Use SyntaxHighlighter to display
 
 [unreleased]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/develop
+[0.5.8]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.5.8
 [0.5.7]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.5.7
 [0.5.6]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.5.6
 [0.5.5]: https://github.com/mAAdhaTTah/WP-Gistpen/tree/0.5.5
